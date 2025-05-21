@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.box {
+    height: 300px;
+    width: 30%;
+    background-color: blue;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 960px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.item {
+    height: 300px;
+    width: 30%;
+    background-color: red;
+
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    justify-content: space-between;
+    margin: 20px auto;
+    gap: 20px;
+
+}
+
+/* タイトルを見本のようにもう少し右寄せにしたかったのですが、どのようにしたら良いでしょうか */
+.header {
+    display: flex;
+    width: 960px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8%;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    max-width: 960px;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav li {
+    position: relative;
+    padding: 0 30px;
+    font-size: 14px;
+}
+
+.nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.5em;
+    border-right: 1px solid #444;
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav li {
+        align-items: flex-start;
+        width: 500%;
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+    }
+
+    .nav li::after {
+        display: none;
+    }
+}
