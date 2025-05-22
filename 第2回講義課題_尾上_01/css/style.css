@@ -19,6 +19,7 @@
     width: 30%;
     background-color: red;
 
+
 }
 
 .wrap {
@@ -31,15 +32,15 @@
 
 }
 
-/* タイトルを見本のようにもう少し右寄せにしたかったのですが、どのようにしたら良いでしょうか */
 .header {
     display: flex;
-    width: 960px;
+    max-width: 960px;
     justify-content: space-between;
     align-items: center;
-    padding: 8%;
+
 }
 
+/* headerでmax-width,nav ulにmax-width　立て続けに使っても問題ないでしょうか。 */
 .nav ul {
     display: flex;
     list-style: none;
@@ -66,6 +67,8 @@
     border-right: 1px solid #444;
 }
 
+/* chat GPTなどで検索しながらコードを書いたのですが、なぜこうなるのかという意味の結びつけ？かたが難しいです */
+
 @media screen and (max-width: 767px) {
     .header {
         flex-direction: column;
@@ -88,3 +91,5 @@
         display: none;
     }
 }
+
+/* paddingやmarginに対して％を使用することはありますか？ */
