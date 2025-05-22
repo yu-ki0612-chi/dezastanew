@@ -37,43 +37,38 @@
     max-width: 960px;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 
 }
 
-/* headerでmax-width,nav ulにmax-width　立て続けに使っても問題ないでしょうか。 */
 .nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-evenly;
-    max-width: 960px;
     margin: 0;
     padding: 0;
 
 }
 
 .nav li {
-    position: relative;
-    padding: 0 30px;
+    /* position: relative; */
+    padding: 5px 30px;
     font-size: 14px;
 }
 
-.nav li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 1.5em;
+.nav li:not(:last-child) {
     border-right: 1px solid #444;
 }
-
-/* chat GPTなどで検索しながらコードを書いたのですが、なぜこうなるのかという意味の結びつけ？かたが難しいです */
 
 @media screen and (max-width: 767px) {
     .header {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding: 0 10px;
+    }
+
+    nav {
+        width: 100%;
     }
 
     .nav ul {
@@ -82,13 +77,12 @@
 
     .nav li {
         align-items: flex-start;
-        width: 500%;
         padding: 10px 0;
         border-bottom: 1px solid #444;
     }
 
-    .nav li::after {
-        display: none;
+    .nav li:not(:last-child) {
+        border-right: none;
     }
 }
 
