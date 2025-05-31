@@ -37,25 +37,25 @@ h2 {
 h3 {
     border-left: 8px solid #1a6f47;
     margin: 5px;
-    color: #1a6f47
+    color: #1a6f47;
+    padding-left: 5px;
+    margin: 11px 12px
+}
+
+.txt {
+    padding: 8%;
 }
 
 @media screen and (max-width: 400px) {
     .container {
-        justify-content: center;
         flex-direction: column;
-
     }
 
     .box {
         height: auto;
     }
 
-    .img_box {
+    img {
         width: 100%;
-
     }
 }
-
-/* ①画面幅を縮める際に、画像裏白背景のボックスがきちんと画像に合わないのですが、どうしたら良いでしょうか。
-② ボーダーとサービスの文字の余白の調整がうまくいきません...*/
