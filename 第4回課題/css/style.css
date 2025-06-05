@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* ヘッダー */
+body {
+    background-color: #e8d9bf;
+}
+
+.header_slider img {
+    width: 100%;
+}
+
+header {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7% 0 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 227px;
+}
+
+.pc_nav ul {
+    display: flex;
+    gap: 54px;
+}
+
+.pc_nav li {
+    width: 105px;
+    text-align: center;
+    color: white;
+
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.text {
+    text-align: center;
+}
+
+.text p:first-child {
+    font-size: 30px;
+    line-height: 3.88;
+    margin: 100px 0 0 0;
+
+}
+
+.text p:nth-child(2) {
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    margin: 22.5px 0 25px 0;
+
+}
+
+.text p:last-child {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+}
+
+/* main */
+/* about us */
+.about {
+    width: 100%;
+}
+
+/* max-widthとwidthがいつもごちゃ混ぜになってしまいます。max-widthはレスポンシブの際に利用するのでしょうか？何度もすみません... */
+/* タグの名前はどんなのしたら分かりやすくなるでしょうか */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image1 {
+    width: 500px;
+    height: 560px;
+    border-bottom-right-radius: 82px;
+    margin: 93px 93px 0px 0px;
+
+}
+
+.image2 {
+    vertical-align: middle;
+    width: 272px;
+    height: 77px;
+    margin: 56px 0px 47px 0;
+}
+
+.text-box p:first-child {
+    font-size: 44px;
+    line-height: 1.38;
+    margin-bottom: 23px;
+}
+
+.text-box p:last-child {
+    font-size: 16px;
+    line-height: 1.62;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+}
+
+/* ①画像と文章サイドの余白がうまくいきません 
+②長文を改行するのに綺麗に整えるにはどうしたら良いでしょうか*/
+/* menu */
+
+image3 {
+    width: 151px;
+    height: 78px;
+    align-items: center;
+}
