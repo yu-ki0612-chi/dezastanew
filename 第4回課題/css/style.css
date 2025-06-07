@@ -3,6 +3,7 @@
 /* ヘッダー */
 body {
     background-color: #e8d9bf;
+
 }
 
 .header_slider img {
@@ -72,27 +73,30 @@ header {
 
 /* main */
 /* about us */
-.about {
-    width: 100%;
-}
 
-/* max-widthとwidthがいつもごちゃ混ぜになってしまいます。max-widthはレスポンシブの際に利用するのでしょうか？何度もすみません... */
-/* タグの名前はどんなのしたら分かりやすくなるでしょうか */
+
 .about-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
-.image1 {
-    width: 500px;
-    height: 560px;
+.about-image {
+    width: 50%;
     border-bottom-right-radius: 82px;
     margin: 93px 93px 0px 0px;
 
 }
 
-.image2 {
+.desc {
+    width: 41%;
+}
+
+.about-title {
     vertical-align: middle;
     width: 272px;
     height: 77px;
@@ -108,17 +112,193 @@ header {
 .text-box p:last-child {
     font-size: 16px;
     line-height: 1.62;
-    overflow-wrap: break-word;
-    white-space: normal;
+
 
 }
 
-/* ①画像と文章サイドの余白がうまくいきません 
-②長文を改行するのに綺麗に整えるにはどうしたら良いでしょうか*/
 /* menu */
-
-image3 {
+.menu-title {
+    display: block;
     width: 151px;
-    height: 78px;
-    align-items: center;
+    margin: 95px auto;
 }
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.menu-box {
+    width: 30%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+.menu-image {
+    border-top-right-radius: 41px;
+}
+
+h3 {
+    position: absolute;
+    color: #d30202;
+    font-size: 38px;
+
+}
+
+.menu-txt {
+    font-size: 17px;
+    line-height: 1.47;
+    margin: 43px auto;
+}
+
+/* gallery */
+.gallery-title {
+    display: block;
+    width: 245px;
+    margin: 85px auto;
+}
+
+.gallery-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+
+}
+
+.gallery-container img {
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* event */
+.event-title {
+    display: flex;
+    width: 173px;
+    margin: 59px auto;
+}
+
+.event-container {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    align-items: center;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.event-box {
+    width: 1000px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 3.6px solid #4f260b;
+    padding-left: 157px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.event-list {
+    display: flex;
+    font-size: 23px;
+    line-height: 1.95;
+    align-items: center;
+
+
+}
+
+.date {
+    white-space: nowrap;
+    margin-right: 54px;
+}
+
+.content {
+    border-bottom: solid #4f260b;
+    padding-bottom: 0;
+    line-height: 1;
+}
+
+/* access */
+.access-title {
+    display: flex;
+    justify-content: center;
+    width: 213px;
+    margin: 0 auto;
+
+}
+
+.access-map iframe {
+    display: block;
+    width: 100%;
+    height: 470px;
+}
+
+
+/* footer */
+footer {
+    background-color: #ffffff;
+
+}
+
+.footer-container {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: #000000;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.footer-logo {
+    width: 226px;
+    height: auto;
+    font-size: 52px;
+    padding-right: 40px;
+}
+
+.footer-txt {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    color: #000000;
+}
+
+.copy {
+    font-size: 16px;
+    text-align: center;
+    color: #000000;
+    margin-top: 74px;
+}
+
+.page-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 125px;
+}
+
+/* 質問
+①共通するものは同じクラス名でまとめるのにどうまとめたら良いかわからず、同じものを何度も記入してしまいました。
+②それぞれの見出しタグ（h2）周りの余白の取り方がうまくいきません。h2タグ上下の余白をAiデータから測り、その通りにmarginで余白をとろうとすると見出しタグが中央に来ていたものが左寄せに戻ってしまったりします。
+③セクションのメニュー画像の上に文字が重なりません。
+④フッターがどうしてもお手本のようにいきません (T T) */
+
+/* 感想
+他のサイトを見たときに、これは横並びだからdisplay~だなとかなんとなくですが、理解できてくると楽しかったり、
+今回のサイトコーディングもまだまだ時間がかなりかかってしまいますが、うまく見本通りできた時はめちゃめちゃ達成感です！先生の説明がわかりやすいので理解しやすかったり、英語が苦手なので苦戦する部分も大半ですが、引き続き頑張ります！添削よろしくお願いいたします。 */
