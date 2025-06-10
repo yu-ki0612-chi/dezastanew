@@ -74,6 +74,10 @@ header {
 /* main */
 /* about us */
 
+#about {
+    padding-right: 10px;
+    padding-left: 10px;
+}
 
 .about-container {
     display: flex;
@@ -81,8 +85,6 @@ header {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    padding-right: 10px;
-    padding-left: 10px;
 }
 
 .about-image {
@@ -117,10 +119,17 @@ header {
 }
 
 /* menu */
+#menu {
+    padding-left: 10px;
+    padding-right: 10px;
+
+
+}
+
 .menu-title {
     display: block;
     width: 151px;
-    margin: 95px auto;
+    margin: 95px auto 39px;
 }
 
 .menu-container {
@@ -129,14 +138,13 @@ header {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    position: relative;
+    gap: 10px;
 
 }
 
-.menu-box {
-    width: 30%;
-    padding-left: 10px;
-    padding-right: 10px;
+.menu-box div {
+    position: relative;
+
 }
 
 
@@ -146,8 +154,10 @@ header {
     border-top-right-radius: 41px;
 }
 
-h3 {
+.menu-box h3 {
     position: absolute;
+    top: 187px;
+    left: 12px;
     color: #d30202;
     font-size: 38px;
 
@@ -163,7 +173,7 @@ h3 {
 .gallery-title {
     display: block;
     width: 245px;
-    margin: 85px auto;
+    margin: 85px auto 16px;
 }
 
 .gallery-container {
@@ -181,10 +191,16 @@ h3 {
 
 
 /* event */
+
+#event {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .event-title {
     display: flex;
     width: 173px;
-    margin: 59px auto;
+    margin: 59px auto 30px;
 }
 
 .event-container {
@@ -193,16 +209,16 @@ h3 {
     max-width: 1000px;
     align-items: center;
     margin: 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-}
+    padding: 37px 10px;
 
-.event-box {
-    width: 1000px;
-    height: 200px;
     background-color: #ffffff;
     border: 3.6px solid #4f260b;
-    padding-left: 157px;
+}
+
+/* 先生の動画内でbackground-colorとborderを.event-boxから.event-containerに移動させるとテキストが中央よりになり左右の余白も取れておりましたが、実際に同じように変更してみても左側の余白が詰まってしまいます。なぜでしょうか。。。 */
+.event-box {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -235,7 +251,7 @@ h3 {
     display: flex;
     justify-content: center;
     width: 213px;
-    margin: 0 auto;
+    margin: 78px auto 36px;
 
 }
 
@@ -243,25 +259,25 @@ h3 {
     display: block;
     width: 100%;
     height: 470px;
+
 }
 
 
 /* footer */
 footer {
     background-color: #ffffff;
+    padding-top: 50px;
 
 }
 
 .footer-container {
     max-width: 1000px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     margin: 0 auto;
     color: #000000;
-    gap: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+
 
 }
 
@@ -269,14 +285,16 @@ footer {
     width: 226px;
     height: auto;
     font-size: 52px;
-    padding-right: 40px;
 }
 
-.footer-txt {
+
+.footer-txt p {
     font-size: 20px;
-    padding-bottom: 20px;
-    text-align: left;
+    margin-left: 64px;
+    padding-top: 82px;
+    line-height: 1.95;
     color: #000000;
+    text-align: left;
 }
 
 .copy {
@@ -292,13 +310,3 @@ footer {
     bottom: 40px;
     width: 125px;
 }
-
-/* 質問
-①共通するものは同じクラス名でまとめるのにどうまとめたら良いかわからず、同じものを何度も記入してしまいました。
-②それぞれの見出しタグ（h2）周りの余白の取り方がうまくいきません。h2タグ上下の余白をAiデータから測り、その通りにmarginで余白をとろうとすると見出しタグが中央に来ていたものが左寄せに戻ってしまったりします。
-③セクションのメニュー画像の上に文字が重なりません。
-④フッターがどうしてもお手本のようにいきません (T T) */
-
-/* 感想
-他のサイトを見たときに、これは横並びだからdisplay~だなとかなんとなくですが、理解できてくると楽しかったり、
-今回のサイトコーディングもまだまだ時間がかなりかかってしまいますが、うまく見本通りできた時はめちゃめちゃ達成感です！先生の説明がわかりやすいので理解しやすかったり、英語が苦手なので苦戦する部分も大半ですが、引き続き頑張ります！添削よろしくお願いいたします。 */
