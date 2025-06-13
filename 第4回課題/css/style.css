@@ -10,6 +10,7 @@ body {
     width: 100%;
 }
 
+
 header {
     position: relative;
 }
@@ -52,8 +53,7 @@ header {
 
 .text p:first-child {
     font-size: 30px;
-    line-height: 3.88;
-    margin: 100px 0 0 0;
+    margin: 100px 0 37px 0;
 
 }
 
@@ -135,7 +135,6 @@ header {
 .menu-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 1000px;
     margin: 0 auto;
     gap: 10px;
@@ -147,16 +146,21 @@ header {
 
 }
 
+.menu-box {
+    width: 30%;
+}
+
 
 
 
 .menu-image {
     border-top-right-radius: 41px;
+    width: 100%;
 }
 
 .menu-box h3 {
     position: absolute;
-    top: 187px;
+    top: 92%;
     left: 12px;
     color: #d30202;
     font-size: 38px;
@@ -215,17 +219,6 @@ header {
     border: 3.6px solid #4f260b;
 }
 
-/* 先生の動画内でbackground-colorとborderを.event-boxから.event-containerに移動させるとテキストが中央よりになり左右の余白も取れておりましたが、実際に同じように変更してみても左側の余白が詰まってしまいます。なぜでしょうか。。。 */
-.event-box {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-
 .event-list {
     display: flex;
     font-size: 23px;
@@ -266,7 +259,7 @@ header {
 /* footer */
 footer {
     background-color: #ffffff;
-    padding-top: 50px;
+    padding-bottom: 74px;
 
 }
 
@@ -274,8 +267,9 @@ footer {
     max-width: 1000px;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
+    padding-top: 82px;
     color: #000000;
 
 
@@ -285,13 +279,13 @@ footer {
     width: 226px;
     height: auto;
     font-size: 52px;
+    padding-left: 10px;
 }
 
 
 .footer-txt p {
     font-size: 20px;
     margin-left: 64px;
-    padding-top: 82px;
     line-height: 1.95;
     color: #000000;
     text-align: left;
@@ -310,3 +304,9 @@ footer {
     bottom: 40px;
     width: 125px;
 }
+
+/* 
+修正終えましたので、ご確認よろしくお願いいたします。そしていつも分かりやすく添削いただきありがとうございます！先生の説明を聞き、わかったぞ！と思いながら自分でやってみようとすると、どうだったかな？眉間に皺を寄せてます。
+コーディングを独学でするには骨が折れるなと本当に思いました。 
+
+マップのキッザニア福岡には行ったことがなくて今年中に子どもたちに職業体験をさせてあげたいなぁと計画しています！何か自分の好きなことを見つけられるきっかけになったらいいなと思ってます*/
