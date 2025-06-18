@@ -47,6 +47,113 @@ header {
     font-weight: bold;
 }
 
+/* スマホ版メニュー */
+
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+/* メニューとロゴがぶつかる直前のタイミング */
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    /* ハンバーガーボタン */
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        /* 位置の調整 */
+        position: absolute;
+        top: 23px;
+        right: 25px;
+        /* 重なり具合 */
+        z-index: 2;
+
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 3px;
+        background-color: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ばつ印 */
+    .sp_btn.open span {
+        background-color: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューの見た目 */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        /* 重なり具合 */
+        z-index: 1;
+
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 40px;
+    }
+
+    .sp_nav ul li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+            "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+}
+
+/* サブテキスト */
 .text {
     text-align: center;
 }
@@ -71,6 +178,11 @@ header {
     letter-spacing: 0.1em;
 }
 
+/* PC版では改行しない */
+.sp-br {
+    display: none;
+}
+
 /* main */
 /* about us */
 
@@ -85,6 +197,7 @@ header {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
+    position: relative;
 }
 
 .about-image {
@@ -103,6 +216,7 @@ header {
     width: 272px;
     height: 77px;
     margin: 56px 0px 47px 0;
+    position: absolute;
 }
 
 .text-box p:first-child {
@@ -184,6 +298,7 @@ header {
     display: flex;
     width: 100%;
     height: auto;
+
 
 }
 
@@ -279,7 +394,6 @@ footer {
     width: 226px;
     height: auto;
     font-size: 52px;
-    padding-left: 10px;
 }
 
 
@@ -305,8 +419,204 @@ footer {
     width: 125px;
 }
 
-/* 
-修正終えましたので、ご確認よろしくお願いいたします。そしていつも分かりやすく添削いただきありがとうございます！先生の説明を聞き、わかったぞ！と思いながら自分でやってみようとすると、どうだったかな？眉間に皺を寄せてます。
-コーディングを独学でするには骨が折れるなと本当に思いました。 
+@media screen and (max-width: 767px) {
+    .header {
+        height: 650px;
+    }
 
-マップのキッザニア福岡には行ったことがなくて今年中に子どもたちに職業体験をさせてあげたいなぁと計画しています！何か自分の好きなことを見つけられるきっかけになったらいいなと思ってます*/
+    /* サブテキスト */
+    .text p:first-child {
+        font-size: 17px;
+        margin: 41px 0 0 0;
+        padding: 0 38;
+
+    }
+
+    .text p:nth-child(2) {
+        font-size: 38px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        margin: 22px 0 0 0;
+
+    }
+
+    .text p:last-child {
+        font-size: 16px;
+        line-height: 1.87;
+        letter-spacing: 0.1em;
+        padding: 0 19;
+        margin-top: 26px;
+    }
+
+    /* SP版では改行 */
+    .sp-br {
+        display: inline;
+    }
+
+    /* ABOUT */
+    .about-container {
+        display: block;
+        max-width: 100%;
+        object-fit: cover;
+
+    }
+
+    .about-title {
+        display: block;
+        justify-content: center;
+        margin: 0;
+        width: 160px;
+        height: 45px;
+        position: static;
+
+    }
+
+    .about-image {
+        display: block;
+        border-radius: 0;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .desc {
+        width: 100%;
+        padding: 0 20;
+    }
+
+    .text-box p:first-child {
+        font-size: 36px;
+        line-height: 1.25;
+        margin-bottom: 19px;
+    }
+
+    .text-box p:last-child {
+        font-size: 16px;
+        line-height: 1.75;
+        margin: 0 0 34px 0;
+    }
+
+    /* MENU */
+    .menu-title {
+        width: 87px;
+        margin-bottom: 17px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .menu-box {
+        width: 80%;
+    }
+
+    .menu-box h3 {
+        font-size: 38px;
+    }
+
+    .menu-txt {
+        line-height: 1.59;
+    }
+
+    /* GALLERY */
+    .gallery-title {
+        width: 142px;
+        margin-bottom: 15px;
+
+    }
+
+    .gallery-container {
+        display: block;
+
+    }
+
+    .gallery-container img {
+        width: 100%;
+        display: none;
+    }
+
+    .gallery-container img:first-child {
+        display: block;
+    }
+
+    /* EVENT */
+    .event-title {
+        display: block;
+        width: 100px;
+        height: auto;
+        margin-bottom: 45px;
+    }
+
+    .event-list {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+    }
+
+    .content {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 15px;
+    }
+
+    /* ACCESS */
+    .access-title {
+        display: block;
+        width: 124px;
+        height: auto;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    .access-map iframe {
+        height: 191px;
+
+    }
+
+    /* FOOTER */
+    footer {
+        padding-bottom: 26px;
+
+    }
+
+    .footer-container {
+        display: block;
+        max-width: 100%;
+        flex-direction: column;
+        padding-top: 40px;
+        padding-left: 20px;
+
+
+    }
+
+    .footer-txt p {
+        font-size: 18px;
+        line-height: 1.72;
+        margin: 0;
+        margin-top: 26px;
+    }
+
+    .copy {
+        margin-top: 39px;
+    }
+
+    .page-top {
+        width: 100px;
+    }
+}
+
+
+
+/* 
+①ABOUT USのタイトルを画像の上に持ってきたかったのですができませんでした。
+②ABOUT USのイメージ画像が画面幅いっぱいにならないのと見本の画像の大きさになりません。。
+③イベントの画面幅を狭めた際にテキストが「…」と省略されません。
+④全体的に余白の取り方が難しったです。うまく反映されていない箇所もありそうです。
+コーディングが楽しいと思える瞬間がもうそこまで見えてきた気がします。まだ理解に苦しむ期間が続きそうですががんばります。添削よろしきお願いいたします。
+
+*/

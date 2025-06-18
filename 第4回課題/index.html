@@ -11,10 +11,13 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="header_slider">
             <div>
-                <img src="images/pc_first-100.jpg" alt="店内の様子">
+                <picture>
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
             </div>
         </div>
         <div class="header_wrap">
@@ -26,19 +29,32 @@
                     <li><a href="#menu">MENU</a></li>
                     <li><a href="#gallery">GALLERY</a></li>
                     <li><a href="#event">EVENT</a></li>
-                    <li><a href="#accese">ACCESS</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+            <div class="sp_btn">
+                <span></span>
+            </div>
+
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </header>
 
     <div class="text">
         <p>Have a happy day From a cup of coffee.</p>
         <p>ハッピーに溢れる1日を<br>
             1杯のコーヒーから。</p>
-        <p>毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-            足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+        <p>毎日を丁寧に大切に過ごしたい。<br class="sp-br">だからこそ一杯一杯丁寧にコーヒーを入れ<br class="sp-br">
+            足を運んでくれるお客さんには落ち着く空間と<br class="sp-br">こだわりのコーヒーを提供したい。</p>
     </div>
     <main>
         <section id="about">
@@ -164,7 +180,15 @@
         </footer>
         </div>
     </main>
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
 
+        });
+    </script>
 </body>
 
 </html>
