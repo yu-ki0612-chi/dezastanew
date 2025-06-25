@@ -154,9 +154,12 @@ header {
 }
 
 /* サブテキスト */
+
 .text {
     text-align: center;
 }
+
+
 
 .text p:first-child {
     font-size: 30px;
@@ -178,6 +181,26 @@ header {
     letter-spacing: 0.1em;
 }
 
+@media screen and (max-width: 1100px) {
+    .text p:first-child {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .text p:nth-child(2) {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .text p:last-child {
+        font-size: 16px;
+    }
+}
+
+/* 上の記述で合ってますでしょうか... */
+
 /* PC版では改行しない */
 .sp-br {
     display: none;
@@ -186,10 +209,9 @@ header {
 /* main */
 /* about us */
 
-#about {
-    padding-right: 10px;
-    padding-left: 10px;
-}
+/* #about {
+    
+} */
 
 .about-container {
     display: flex;
@@ -197,7 +219,8 @@ header {
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-    position: relative;
+
+
 }
 
 .about-image {
@@ -211,12 +234,17 @@ header {
     width: 41%;
 }
 
+
 .about-title {
     vertical-align: middle;
     width: 272px;
     height: 77px;
     margin: 56px 0px 47px 0;
-    position: absolute;
+}
+
+.text-box {
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .text-box p:first-child {
@@ -243,7 +271,7 @@ header {
 .menu-title {
     display: block;
     width: 151px;
-    margin: 95px auto 39px;
+    margin: 39px auto 39px;
 }
 
 .menu-container {
@@ -319,7 +347,7 @@ header {
 .event-title {
     display: flex;
     width: 173px;
-    margin: 59px auto 30px;
+    margin: 26px auto 30px;
 }
 
 .event-container {
@@ -455,19 +483,9 @@ footer {
 
     /* ABOUT */
     .about-container {
-        display: block;
         max-width: 100%;
         object-fit: cover;
-
-    }
-
-    .about-title {
-        display: block;
-        justify-content: center;
-        margin: 0;
-        width: 160px;
-        height: 45px;
-        position: static;
+        flex-direction: column;
 
     }
 
@@ -476,24 +494,38 @@ footer {
         border-radius: 0;
         width: 100%;
         height: auto;
+        margin: 0;
+
+    }
+
+    .about-title {
+        display: block;
+        justify-content: center;
+        margin-top: 53px;
+        margin-bottom: 11px;
+        width: 160px;
+        height: 45px;
 
     }
 
     .desc {
         width: 100%;
         padding: 0 20;
+        display: contents;
     }
+
 
     .text-box p:first-child {
         font-size: 36px;
         line-height: 1.25;
+        margin-top: 34px;
         margin-bottom: 19px;
     }
 
     .text-box p:last-child {
         font-size: 16px;
         line-height: 1.75;
-        margin: 0 0 34px 0;
+        margin: 0 0 10px 0;
     }
 
     /* MENU */
@@ -506,7 +538,6 @@ footer {
         flex-direction: column;
         align-items: center;
         max-width: 100%;
-        margin-bottom: 40px;
     }
 
     .menu-box {
@@ -514,7 +545,8 @@ footer {
     }
 
     .menu-box h3 {
-        font-size: 38px;
+        font-size: 40px;
+        top: 95%;
     }
 
     .menu-txt {
@@ -524,6 +556,7 @@ footer {
     /* GALLERY */
     .gallery-title {
         width: 142px;
+        margin-top: 43px;
         margin-bottom: 15px;
 
     }
@@ -540,6 +573,7 @@ footer {
 
     .gallery-container img:first-child {
         display: block;
+        margin-bottom: 26px;
     }
 
     /* EVENT */
@@ -547,7 +581,16 @@ footer {
         display: block;
         width: 100px;
         height: auto;
-        margin-bottom: 45px;
+        margin-bottom: 15px;
+    }
+
+    .event-container {
+        padding-left: 26px;
+
+    }
+
+    .event-box {
+        width: 100%;
     }
 
     .event-list {
@@ -557,7 +600,7 @@ footer {
     }
 
     .content {
-        width: 100%;
+        max-width: 100%;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -613,10 +656,13 @@ footer {
 
 
 /* 
-①ABOUT USのタイトルを画像の上に持ってきたかったのですができませんでした。
-②ABOUT USのイメージ画像が画面幅いっぱいにならないのと見本の画像の大きさになりません。。
-③イベントの画面幅を狭めた際にテキストが「…」と省略されません。
-④全体的に余白の取り方が難しったです。うまく反映されていない箇所もありそうです。
-コーディングが楽しいと思える瞬間がもうそこまで見えてきた気がします。まだ理解に苦しむ期間が続きそうですががんばります。添削よろしきお願いいたします。
+①今回のカフェサイトの場合、ロゴとナビゲーションが横並びになっているので画面幅が狭くなったときにデザインが崩れるタイミングが分かりやすかったのですが、他にデザインが崩れる場合の例をいくつか知りたいです。
 
-*/
+②about usの箇所のpc版の写真をスマホ版にしていたことに気づき、pc版に差し替えたところ何故かpc版の画像が小さく表示されてしまいます。何故でしょうか..
+
+③orderを使用する際に、h2に対して使用するのは分かったのですが、実際にコードを書く際にどのように書いたら良いかわからなくなってしまいました。今回は、HTMLのh2に直接styleをつけてorderを使用しましたが、style.cssに書く際の書き方も教えていただきたいです。
+
+ jQueryの$(function() ←のカッコは飾りみたいなものでしょうか？
+ 
+ 間が空いた状態での課題修正だったので時間がある時にもう一度一からやってみようと思います。
+ 修正の添削よろしくお願いいたします。*/
