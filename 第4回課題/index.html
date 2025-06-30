@@ -142,8 +142,6 @@
                 <img src="images/pc_gallary_01-100.jpg" alt="ラテアート">
                 <img src="images/pc_gallary_03-100.jpg" alt="くつろげるカフェ店内">
             </div>
-            <button class="slick-prev slick-arrow"></button>
-            <button class="slick-next slick-arrow"></button>
         </section>
 
 
@@ -211,16 +209,17 @@
                 $('.sp_btn').toggleClass('open');
                 $('.sp_nav').fadeToggle();
             })
+
             $('.header_slider').slick({
                 // autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
                 arrows: false,
             });
-            slick - dotted.slick - slider
-            margin - bottom;
-        })
-        $(function () {
+            // slick - dotted.slick - slider
+            // margin - bottom;
+
+
             $('.gallery-container').slick({
                 autoplaySpeed: 2000,
                 slidesToShow: 5,
@@ -231,17 +230,18 @@
 
                     {
                         breakpoint: 767,
-                        setting: {
+                        settings: {
                             slidesToShow: 1,
                             slidersToScroll: 1,
                             infinite: true,
-                            dots: true
+
                         }
                     }]
             });
 
 
-        })
+        });
+
 
 
     </script>

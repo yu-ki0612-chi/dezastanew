@@ -122,9 +122,15 @@ header {
         transform: rotate(-45deg);
     }
 
+    .sp_btn.open {
+        overflow: hidden;
+        position: fixed;
+    }
+
     /* メニューの見た目 */
     .sp_nav {
-        position: absolute;
+        position: fixed;
+        /* position: absolute; */
         top: 0;
         left: 0;
         width: 100%;
@@ -132,6 +138,7 @@ header {
         background-color: rgba(0, 0, 0, 0.8);
         /* 重なり具合 */
         z-index: 1;
+        overflow-y: auto;
 
     }
 
@@ -179,6 +186,7 @@ header {
     font-size: 23px;
     line-height: 1.65;
     letter-spacing: 0.1em;
+    margin-bottom: 56px;
 }
 
 
@@ -203,9 +211,7 @@ header {
 /* main */
 /* about us */
 
-#about {
-    padding-top: 92px;
-}
+
 
 .about-container {
     display: flex;
@@ -237,7 +243,7 @@ header {
     vertical-align: middle;
     width: 272px;
     height: 77px;
-    margin: 56px 0px 47px 0;
+    margin: 0 0px 47px 0;
 }
 
 .text-box {
@@ -340,12 +346,12 @@ header {
 }
 
 .slick-prev {
-    left: 510px;
+    left: 22%;
     z-index: 10;
 }
 
 .slick-next {
-    right: 510px;
+    right: 22%;
 }
 
 .slick-prev:before,
@@ -360,17 +366,13 @@ header {
 
 
 .slick-prev:before {
-    transform: rotate(45deg);
-    position: absolute;
-    right: 30%;
-    top: -50%;
+    transform: rotate(225deg);
+
 }
 
 .slick-next:before {
-    transform: rotate(225deg);
-    position: absolute;
-    left: 30%;
-    top: -50%;
+    transform: rotate(45deg);
+
 
 }
 
@@ -540,7 +542,7 @@ footer {
     .about-title {
         display: block;
         justify-content: center;
-        margin-top: 53px;
+
         margin-bottom: 11px;
         width: 160px;
         height: 45px;
@@ -613,6 +615,14 @@ footer {
     .gallery-container img:first-child {
         display: block;
         margin-bottom: 26px;
+    }
+
+    .slick-prev {
+        left: 5%;
+    }
+
+    .slick-next {
+        right: 5%;
     }
 
     /* EVENT */
@@ -707,15 +717,10 @@ footer {
     margin-bottom: 0;
 }
 
-/* 先日は第6回目の講義ありがとうございました！1回1回の講義の内容が濃く、まだまだ全然頭が追いついていないのですが、焦らず自分のペースで理解を深めていけたらと思います。平垣内先生の声にいつも癒されております。時間は空きますがポートフォリオの作成の際にはまたよろしくお願いいたします。
+/* 添削ありがとうござました！細かい微調整が完了しましたので、提出させていただきます。
+また、ハンバーガーメニューの背景が途切れてしまう箇所も挑戦してみました！
 
-①授業中に仰っていた＜＞が交差してしまい、自力ではどうにもなりそうになかったので％の計算の仕方から詳しく教えていただきたいです。
-②ギャラリー箇所について、画面幅を狭めた際に5枚分の写真が一気に表示されるようになってしまいました。
+モーダルウィンドウは挑戦してみたのですが、ギャラリーの崩れが生じてしまいまったため模写課題で挑戦してみたいと思います！
+cssの整理方法も模写課題からきちんと先生の仰っていたことを参考にしながら整理してみたいと思います！
 
-③デベロッパーツールの見方はなんとなく理解できたのですが、書き加え方がイマイチよく分かっていないので改めて教えていただきたいです。
-
-現状のHTML、cssの見やすい整理の仕方を教えていただきたいです。
-メディアクエリが飛び飛びにあるので、ごちゃごちゃしてみづらいなと感じてます。
-
-添削よろしくお願いいたします。
-*/
+添削よろしくお願いいたします*/
