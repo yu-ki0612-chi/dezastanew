@@ -210,6 +210,11 @@
                 $('.sp_nav').fadeToggle();
             })
 
+            $('.sp_nav a').on('click', function () {
+                $('.sp_btn').removeClass('open');
+                $('.sp_nav').fadeOut();
+            })
+
             $('.header_slider').slick({
                 // autoplay: true,
                 autoplaySpeed: 2000,
