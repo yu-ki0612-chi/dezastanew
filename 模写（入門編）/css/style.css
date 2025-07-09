@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+.body {
+    background-color: white;
+}
+
+.nav-wrap {
+    max-width: 960px;
+    padding: 1% 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.logo h1 {
+    height: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+/* main */
+.main-visual {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+    margin-bottom: 60px;
+
+}
+
+/* about */
+
+
+
+.container {
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 4%;
+
+}
+
+.section-title {
+    display: inline-block;
+    font-size: 32px;
+    border-bottom: solid 1px black;
+    margin-bottom: 80px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+
+}
+
+.box img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 18px;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Bicycle */
+
+ul.image-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    gap: 15px;
+    margin-bottom: 90px;
+}
+
+ul.image-list li {
+    display: inline-block;
+    text-align: center;
+
+}
+
+ul.image-list img {
+    width: 100%;
+    height: auto;
+}
+
+.content-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10 0;
+}
+
+.li p {
+    font-size: 16px;
+}
+
+#footer {
+    text-align: center;
+    padding: 10 0;
+    font-size: 10px;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* About */
+
+    .box {
+        flex-direction: column;
+
+    }
+
+    .box img {
+        width: 20%;
+        height: 20%;
+    }
+
+    ul.image-list {
+        flex-direction: column;
+    }
+
+}
+
+/* 入門編の模写課題に挑戦してみました。
+動画見ながら、調べながらgptにきいてみたりで作成したのですが、Bicycleの写真3枚横並びにした際の余白がgapで指定しないと開かないのと、タイトルとテキストの余白を指定しても詰まったままになってしまい、
+自己解決できなかったので、添削をお願いいたします。コーディングきちんと理解したいので頑張ります。*/
